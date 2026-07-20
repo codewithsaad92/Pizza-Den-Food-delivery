@@ -8,21 +8,40 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
+
             <div class="logo">
-                <img src="" alt="">
+                <!-- <img src="assets/Gemini_Generated_Image_dmyji0dmyji0dmyj.png" alt=""> -->
             </div>
+
             <ul class="navlist">
                 <li><a href="#home" class="link">Home</a></li>
                 <li><a href="#menu" class="link">Menu</a></li>
                 <li><a href="#service" class="link">Service</a></li>
                 <li><a href="#about" class="link">About</a></li>
                 <li><a href="#contact" class="link">Contact</a></li>
+
+                <li class="mobile-actions">
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-value">0</span>
+                        Cart
+                    </a>
+                </li>
+
+                <li class="mobile-actions">
+                    <a href="#" class="btn">
+                        Sign In
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                </li>
             </ul>
 
             <div class="desktop-action">
@@ -30,96 +49,242 @@
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-value">0</span>
                 </a>
-                <a href="#" class="btn">Sign In <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-                <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" class="btn">
+                    Sign In
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
             </div>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
         </nav>
     </header>
-
+    <div class="overlay"></div>
     <!-- Section -->
     <main>
         <!-- Home -->
         <section class="home" id="home">
             <div class="container">
-                <div class="homr-text">
-                    <h1 class="headeing">Give Your Order & Enjoy Delicious Pizza</h1>
+                <div class="home-text">
+                    <h1 class="headeing">Enjoy Your <br> Delicious <span>Meal</span></h1>
 
                     <p>
                         Freshly baked pizzas made with premium ingredients and
                         delivered hot to your doorstep. Taste the flavor you deserve.
                     </p>
-
-                    <a href="#" class="home-btn">Order Now</a>
+                    <div class="social-media">
+                        <a href="#" class="home-btn">Order Now</a>
+                        <a href="" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="" class="social-link"><i class="fa-brands fa-google-plus"></i></a>
+                    </div>
                 </div>
                 <!-- HOME IMAGE -->
                 <div class="home-image">
-                    <img src="" alt="Pizza Den">
+                    <img src="assets/home.png" alt="Pizza Den">
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" id="about">
-
-            <div class="section-title">
-                <h2>About <span>Us</span></h2>
-            </div>
-
-            <div class="container">
-
-                <div class="about-image">
-                    <img src="images/about-pizza.jpg" alt="Pizza Den">
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        Freshly baked pizzas made with premium ingredients and
-                        delivered hot to your doorstep.
-                    </p>
-
-                    <p>
-                        We are passionate about serving delicious food made with
-                        fresh ingredients and exceptional customer service.
-                    </p>
-
-                    <a href="#" class="home-btn">Order Now</a>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Menu -->
-        <section class="menu" id="menu">
+        <section class="service">
             <div class="container">
                 <div class="section-title">
-                    <h2>Popular <span>Menu</span></h2>
+                    <h5>Our Services</h5>
+                    <h2>How Does it Work</h2>
                 </div>
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <img src="" alt="">
-                        <h3></h3>
-                        <p></p>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="img-container">
+                            <img src="assets/easy-to-order.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Easy to Order</h3>
+                            <p>You only need a few steps in ordering food.</p>
+                        </div>
+                    </div>
 
+                    <div class="service-card">
+                        <div class="img-container">
+                            <img src="assets/fast-delivery.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Fast Delivery</h3>
+                            <p>Delivery that is always on time even faster.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="img-container">
+                            <img src="assets/best-quality.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Best Quality</h3>
+                            <p>Not only fast for us in quality is also number one.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="service" id="service">
-            <div class="container">
+        <section class="menu" id="menu">
+            <div class="menu-container">
+
                 <div class="section-title">
-                    <h2>Our <span>Services</span></h2>
+                    <h5>Our Menu</h5>
+                    <h2>The Most Popular</h2>
                 </div>
+
+                <div class="card-menu" id="menuCards"></div>
+
             </div>
         </section>
+
+        <!-- Review Content -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+
+                <!-- Fixed Image -->
+                <div class="review-image">
+                    <img src="assets/review.png" alt="Delivery Boy">
+                </div>
+
+                <!-- Review Content -->
+                <div class="review-content">
+
+                    <h5>OUR REVIEWS</h5>
+                    <h2>What They Say?</h2>
+
+                    <div class="review-card">
+
+                        <div class="customer">
+                            <div>
+                                <h3 id="customerName">Guy Hawkins</h3>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p id="reviewText">
+                            Foodie is the best. Besides the many delicious meals,
+                            the service is also very good, especially very fast delivery.
+                        </p>
+
+                    </div>
+
+                    <div class="review-buttons">
+                        <button id="prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button id="next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- News Letter section -->
+         <section class="newsletter">
+    <div class="newsletter-container">
+
+        <div class="newsletter-content">
+            <h2>Subscribe To Our Newsletter</h2>
+
+            <p>
+                We recommend you to subscribe our newsletter,
+                drop your email below to get daily updates about us.
+            </p>
+        </div>
+
+        <form class="newsletter-form">
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+</section>
+
+        
+
     </main>
 
     <!-- Foooter -->
     <footer class="footer">
 
-    </footer>
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-box">
+            <h2>Pizza Den</h2>
+            <p>
+                Freshly baked pizzas made with premium ingredients and
+                delivered hot to your doorstep.
+            </p>
+
+            <div class="social-icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-box">
+            <h3>Support</h3>
+
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</li>
+                <li><i class="fa-solid fa-phone"></i> +92 300 1234567</li>
+                <li><i class="fa-solid fa-envelope"></i> info@pizzaden.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Pizza Den. All Rights Reserved. Designed by Muhammad Saad.</p>
+    </div>
+
+</footer>
+
+
+    <script src="script/script.js"></script>
 </body>
 
 </html>
